@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日付表示</title>
+</head>
+<body>
+
+<p id="dateDisplay"></p>
+
+<script>
+
+
+document.write('aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>')
+
+
+
+
+// 現在の日付を取得
+var today = new Date();
+
+// 年、月、日を取得
+var year = today.getFullYear();
+// JavaScriptでは月は0から始まるため、1を足して実際の月に変換する
+var month = today.getMonth() + 1;
+var day = today.getDate();
+
+// 月と日が1桁の場合は前に0を追加する
+if (month < 10) {
+    month = '0' + month;
+}
+if (day < 10) {
+    day = '0' + day;
+}
+
+// yyyy/MM/dd形式で日付を表示
+document.getElementById('dateDisplay').textContent = year + '/' + month + '/' + day;
+</script>
+
+</body>
+</html>
